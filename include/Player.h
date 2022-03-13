@@ -52,9 +52,11 @@ public:
 	void GrabLordBet(const int point);
 	// ·¢ÅÆ
 	bool StoreDispatchCard(const Card& card);
-	bool StoreDispatchCard(const Cards& cards);
+	bool StoreDispatchCard(Cards& cards);
 
 	const Cards& GetCards();
+	void ClearCards();
+	void OutCards(Cards& cards);
 private:
 	std::string m_name;
 	Sex m_sex;

@@ -130,6 +130,10 @@ std::shared_ptr<Player> Player::GetNextPlayer() const
 	return m_next_player;
 }
 
+void Player::GrabLordBet(const int point)
+{
+}
+
 bool Player::StoreDispatchCard(const Card& card)
 {
 	bool flag = true;
@@ -140,7 +144,7 @@ bool Player::StoreDispatchCard(const Card& card)
 	return flag;
 }
 
-bool Player::StoreDispatchCard(const Cards& cards)
+bool Player::StoreDispatchCard(Cards& cards)
 {
 	bool flag = true;
 	while (1)
@@ -153,4 +157,14 @@ bool Player::StoreDispatchCard(const Cards& cards)
 const Cards& Player::GetCards()
 {
 	return m_cards;
+}
+
+void Player::ClearCards()
+{
+	this->m_cards.getCards().clear();
+}
+
+void Player::OutCards(Cards& cards)
+{
+	this->m_cards.OutCard(cards);
 }

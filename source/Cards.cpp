@@ -5,7 +5,7 @@ void Cards::AddCard(const Card& card)
 	m_cards.insert(card);
 }
 
-void Cards::AddCard(const Cards& cards)
+void Cards::AddCard(Cards& cards)
 {
 	for (auto card : cards.getCards())
 	{
@@ -28,7 +28,7 @@ void Cards::OutCard(Cards& cards)
 	
 }
 
-void Cards::ShowCard()
+void Cards::ShowCard() const
 {
 	if (this->IsShow())
 	{

@@ -13,15 +13,15 @@ public:
 	}
 	//发牌
 	void AddCard(const Card& card);
-	void AddCard(const Cards& cards);
+	void AddCard(Cards& cards);
 	//出牌
 	void OutCard(Cards& cards);
-	const std::set<Card>& getCards() const 
+	std::set<Card>& getCards() 
 	{
 		return m_cards;
 	}
 	// 显示所有卡牌
-	void ShowCard();
+	void ShowCard() const;
 	void SetIsShow(const bool show);
 	bool IsShow() const
 	{

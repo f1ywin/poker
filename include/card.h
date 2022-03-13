@@ -43,12 +43,12 @@ public:
 		CardPoint_End
 	};
 	
-	void SetPoint(CardPoint point);
-	void SetSuit(CardSuit suit);
-	void SetFace(CardFace face);
-	CardPoint GetPoint();
-	CardSuit GetSuit();
-	CardFace GetFace();
+	void SetPoint(const CardPoint& point);
+	void SetSuit(const CardSuit& suit);
+	void SetFace(const CardFace& face);
+	const CardPoint& GetPoint() const;
+	const CardSuit& GetSuit() const;
+	const CardFace& GetFace() const;
 
 	bool operator==(const Card& card) const
 	{
